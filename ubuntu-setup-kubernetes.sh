@@ -5,4 +5,9 @@
 
 
 # use kubead to init kubernetes
-kubeadm init
+
+kubectl create serviceaccount -n kube-system tiller
+kubectl create clusterrolebinding tiller-binding --clusterrole=cluster-admin --serviceaccount kube-system:tiller
+
+# run tiller with specific tiller account
+helm init --service-account tiller
