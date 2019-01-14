@@ -5,7 +5,7 @@
 
 # disable swap
 swapoff -a
-sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab # disable swap after reboot
+sudo sed -ri '/\sswap\s/s/^#?/#/' /etc/fstab # disable swap after reboot
 
 # update package index and install https apt
 apt-get update && apt-get install -y apt-transport-https
