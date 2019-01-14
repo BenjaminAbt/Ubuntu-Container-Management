@@ -1,7 +1,8 @@
 #!/bin/sh
 
 # Use this script only against a fresh ubuntu server
-# curl https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/update-ubuntu.sh | bash
+#    curl https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/update-ubuntu.sh | sudo bash
+#    sudo reboot
 
 # Update package index
 apt update -y
