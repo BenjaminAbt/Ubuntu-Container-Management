@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Use this script only against a fresh ubuntu server
-#    curl https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/ubuntu-install-kubernetes.sh | sudo bash
+#    curl -sS -H "Cache-Control: no-cache" https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/ubuntu-install-kubernetes.sh | sudo bash
 
 
 # update package index and install https apt
