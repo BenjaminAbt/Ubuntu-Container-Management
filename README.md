@@ -7,3 +7,6 @@ This description works for a fresh ubuntu server installation (tested in 18.04)
 
 2) Install Docker and Kubernetes
 > curl https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/ubuntu-install-kubernetes.sh | sudo bash
+
+2) Setup kubernetes
+> curl https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/ubuntu-setup-kubernetes.sh | sudo bash
