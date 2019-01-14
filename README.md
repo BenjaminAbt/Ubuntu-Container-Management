@@ -4,13 +4,13 @@ This description works for a fresh ubuntu server installation (tested in 18.04).
 
 Goal is to run a kubernetes cluster on a local ubuntu machine (VM or bare metal) and expose service to external clients.
 
-1) Update system
+1) Update system (reboot required)
 > curl -sS -H "Cache-Control: no-cache"  https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/ubuntu-system-upgrade.sh | sudo bash
 
-2) Install Docker and Kubernetes
+2) Install Docker and Kubernetes (reboot recommended)
 > curl -sS -H "Cache-Control: no-cache"  https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/ubuntu-install-kubernetes.sh | sudo bash
 
-3) Setup kubernetes
+3) Setup kubernetes (reboot recommended)
 > curl -sS -H "Cache-Control: no-cache"  https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/ubuntu-setup-kubernetes.sh | sudo bash
 
 4) Install traefik as ingress
