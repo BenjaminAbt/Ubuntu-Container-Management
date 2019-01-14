@@ -3,11 +3,19 @@
 # Use this script only against a fresh ubuntu server
 #    curl https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/ubuntu-setup-kubernetes | sudo bash
 
+# disable swap
+swapoff -a
 
-# use kubead to init kubernetes
+# init kube admin
+kubeadm init
 
-kubectl create serviceaccount -n kube-system tiller
-kubectl create clusterrolebinding tiller-binding --clusterrole=cluster-admin --serviceaccount kube-system:tiller
+# config kubeadm to use without sudo
+mkdir -p $HOME/.kube
+sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
-# run tiller with specific tiller account
-helm init --service-account tiller
+# allow pods on master, otherwise helm tiller and pods will not start
+kubectl taint nodes --all node-role.kubernetes.io/master-
+
+# init helm
+helm init
