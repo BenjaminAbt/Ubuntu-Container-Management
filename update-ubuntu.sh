@@ -1,12 +1,21 @@
 #!/bin/sh
 
 # Use this script only against a fresh ubuntu server
+# curl https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/update-ubuntu.sh | bash
 
 # Update package index
-sudo apt update -y
+apt update -y
 
 # Upgrade System
-sudo apt upgrade -y
+apt upgrade -y
 
 # remove origin lxd because it is not compatible
-sudo apt-get remove lxd lxd-client -y
+apt-get remove lxd lxd-client -y
+
+# install lxd via snap
+snap install lxd
+
+# init lxd to use containers
+lxd init --auto --storage-backend=dir
+lxc network create lxdbr0  ipv6.address=none ipv4.address=auto ipv4.nat=true
+lxc network attach-profile lxdbr0 default eth0
