@@ -17,4 +17,4 @@ Goal is to run a kubernetes cluster on a local ubuntu machine (VM or bare metal)
 > curl -sS -H "Cache-Control: no-cache"  https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/helm-install-traefik.sh | sudo bash
 
 5) Install Rancher as kubernetes manager
-> curl -sS -H "Cache-Control: no-cache"  https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/helm-install-traefik.sh | sudo bash
+> curl -sS -H "Cache-Control: no-cache"  https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/helm-install-rancher.sh | sudo bash
