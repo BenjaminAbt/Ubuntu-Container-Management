@@ -26,5 +26,10 @@ echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.l
 # update index and install k8s tools
 apt-get update && apt-get install -y kubeadm kubelet kubectl
 
+# kubeadm config
+sudo cp /etc/kubernetes/admin.conf $HOME/
+sudo chown $(id -u):$(id -g) $HOME/admin.conf
+export KUBECONFIG=$HOME/admin.conf
+
 # install helm
 curl -sS -H "Cache-Control: no-cache" https://raw.githubusercontent.com/helm/helm/master/scripts/get | bash
