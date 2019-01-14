@@ -3,6 +3,10 @@
 # Use this script only against a fresh ubuntu server
 #    curl -sS -H "Cache-Control: no-cache" https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/ubuntu-install-kubernetes.sh | sudo bash
 
+# disable swap
+swapoff -a
+sudo sed -i '/ swap / s/^\(.*\)$/#\1/g' /etc/fstab # disable swap after reboot
+
 # update package index and install https apt
 apt-get update && apt-get install -y apt-transport-https
 
