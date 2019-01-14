@@ -3,8 +3,6 @@
 # Use this script only against a fresh ubuntu server
 #    curl https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/ubuntu-install-kubernetes.sh | sudo bash
 
-# disable swap because not supported with kubernetes
-swapoff -a
 
 # update package index and install https apt
 apt-get update && apt-get install -y apt-transport-https
@@ -27,3 +25,6 @@ apt-get update && apt-get install -y kubeadm kubelet kubectl
 
 # install helm
 curl https://raw.githubusercontent.com/helm/helm/master/scripts/get | bash
+
+# disable swap because not supported with kubernetes
+swapoff -a
