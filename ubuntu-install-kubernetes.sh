@@ -26,4 +26,4 @@ echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" > /etc/apt/sources.l
 apt-get update && apt-get install -y kubeadm kubelet kubectl
 
 # install helm
-snap install helm --classic
+curl https://raw.githubusercontent.com/helm/helm/master/scripts/get | bash
