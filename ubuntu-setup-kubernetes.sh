@@ -15,6 +15,7 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 kubectl taint nodes --all node-role.kubernetes.io/master-
 
 # use weave network
+sysctl net.bridge.bridge-nf-call-iptables=1
 kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
 
 # re-config helm
