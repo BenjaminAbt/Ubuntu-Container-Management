@@ -3,9 +3,6 @@
 # Use this script only against a fresh ubuntu server
 #    curl -sS -H "Cache-Control: no-cache" https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/ubuntu-setup-kubernetes | sudo bash
 
-# disable swap
-swapoff -a
-
 # use weave network
 kubectl apply -f "https://cloud.weave.works/k8s/net?k8s-version=$(kubectl version | base64 | tr -d '\n')"
 
