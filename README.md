@@ -1,6 +1,6 @@
 # Ubuntu-Kubernetes
 
-This description works for a fresh ubuntu server installation (tested in 18.04).
+This description works for a fresh ubuntu server installation (tested with 18.04.1 LTS).
 
 Goal is to run a kubernetes cluster on a local ubuntu machine (VM or bare metal) and expose service to external clients.
 
