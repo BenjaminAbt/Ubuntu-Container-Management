@@ -14,7 +14,7 @@ Goal is to run a kubernetes cluster on a local ubuntu machine (VM or bare metal)
 > curl -sS -H "Cache-Control: no-cache"  https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/ubuntu-setup-kubernetes.sh | sudo bash
 
 4) Install Rancher prerequesits
-> curl -sS -H "Cache-Control: no-cache" https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/helm-rancher-pre-install.sh | sudo bash
+> curl -sS -H "Cache-Control: no-cache" https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/helm-rancher-pre-install.sh | sudo bash -s 1.2.3.4
 
 5) Install Rancher
 > curl -sS -H "Cache-Control: no-cache" https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/helm-rancher-install.sh | sudo bash -s _address_
