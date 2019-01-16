@@ -17,4 +17,7 @@ Goal is to run a kubernetes cluster on a local ubuntu machine (VM or bare metal)
 > curl -sS -H "Cache-Control: no-cache" https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/helm-rancher-pre-install.sh | sudo bash -s 1.2.3.4
 
 5) Install Rancher
+
+Add your address to /etc/hosts with `sudo nano /etc/hosts`
+
 > curl -sS -H "Cache-Control: no-cache" https://raw.githubusercontent.com/BenjaminAbt/Ubuntu-Kubernetes/master/helm-rancher-install.sh | sudo bash -s _address_
